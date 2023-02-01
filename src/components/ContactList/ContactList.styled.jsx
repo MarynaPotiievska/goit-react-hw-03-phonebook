@@ -26,7 +26,7 @@ export const ContactName = styled.span`
 `;
 
 export const ContactNumber = styled.span`
-  width: 100px;
+  width: 150px;
   padding-left: 12px;
   font-size: 12px;
 `;
