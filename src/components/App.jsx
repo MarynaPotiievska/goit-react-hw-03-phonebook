@@ -15,11 +15,11 @@ export class App extends Component {
 
   handleSubmit = values => {
     values.id = nanoid();
-    const isInContacts = this.state.contacts.filter(
+    const isInContacts = this.state.contacts.find(
       contact => contact.name.toLowerCase() === values.name.toLowerCase()
     );
 
-    if (isInContacts.length === 0) {
+    if (isInContacts === undefined) {
       this.setState(prevState => ({
         contacts: [values, ...prevState.contacts],
       }));
